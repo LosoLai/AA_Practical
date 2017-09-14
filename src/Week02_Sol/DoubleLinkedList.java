@@ -37,9 +37,9 @@ public class DoubleLinkedList implements MyList
         }
         // otherwise, add node to the head of list.
         else {
-            newNode.setNext(mHead);
-            mHead.setPrev(newNode);
-            mHead = newNode;
+        	mTail.setNext(newNode);
+            newNode.setPrev(mTail);
+            mTail = newNode;
         }
         
         mLength++;
